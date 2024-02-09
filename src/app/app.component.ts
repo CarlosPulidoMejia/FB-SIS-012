@@ -14,12 +14,14 @@ export class AppComponent implements OnInit{
   clasetextoProyectos: string;
   clasetextoTicket: string;
   clasetextoReporte: string;
+  iniciarSesion:boolean;
 
   ngOnInit() {
     window.location.href
     this.clasetextoProyectos = 'nav-link negrita';
     this.clasetextoTicket = 'nav-link';
     this.clasetextoReporte = 'nav-link';
+    this.iniciarSesion = false;
   }
   clickProyectos(){
     this.clasetextoProyectos = 'nav-link negrita'
@@ -38,5 +40,12 @@ export class AppComponent implements OnInit{
     this.clasetextoTicket = 'nav-link negrita'
     this.clasetextoReporte = 'nav-link';
   }
+  
+  IniciarSesion(){
+    this.iniciarSesion = true;
+  }
 
+  cerrarSesion(){
+    this.iniciarSesion = false;
+  }
 }
