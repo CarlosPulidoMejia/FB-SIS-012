@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm" style="background-color: #ffffff;" >
+<nav class="navbar navbar-expand-sm border shadow" style="background-color: #ffffff;" >
   <a class="navbar-brand mx-3" routerLink=''  (click)="cerrarSesion()"><img
       src="../assets/resources/img/descarga.jpg"     
       width="270" height="55" style="max-height:55px;height:35px;" alt="BIM � Banco Inmobiliario Mexicano Logo"
@@ -34,7 +34,7 @@
     </ul>
   </div>
 </nav>
-<section class="vh-100" style="background-color: #024e4f;" hidden *ngIf="iniciarSesion == false">
+<section class="vh-100" style="background-color: #024e4f;" hidden  *ngIf="iniciarSesion == false">
   <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -59,7 +59,7 @@
   </div>
 </section>
 
-<div class="" >
+<div class="m-4" >
   <router-outlet></router-outlet>
 </div>
 <style>
