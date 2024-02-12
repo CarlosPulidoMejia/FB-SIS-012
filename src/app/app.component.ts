@@ -15,11 +15,12 @@ export class AppComponent implements OnInit{
   clasetextoQuejas: string;
   clasetextoCatalogos: string;
   clasetextoTickets:string;
+  clasetextoBitacora: string;
   iniciarSesion:boolean;
   ocultar:boolean;
 
   ngOnInit() {
-    this.clasetextoProyectos = 'nav-link negrita';
+    this.clasetextoBitacora = 'nav-link negrita';
     this.clasetextoQuejas= 'nav-link';
     this.clasetextoCatalogos = 'nav-link';
     this.clasetextoTickets = 'nav-link';
@@ -39,31 +40,38 @@ export class AppComponent implements OnInit{
   }
 
   clickCatalogos(){
-    this.clasetextoProyectos = 'nav-link';
-    this.clasetextoQuejas = 'nav-link';
-    this.clasetextoCatalogos = 'nav-link negrita'
+    this.clasetextoBitacora = 'nav-link'
     this.clasetextoTickets = 'nav-link'
+    this.clasetextoQuejas = 'nav-link'
+    this.clasetextoCatalogos = 'nav-link negrita';
   }
 
   clickTickets(){
-    this.clasetextoProyectos = 'nav-link';
+    this.clasetextoBitacora = 'nav-link'
     this.clasetextoTickets = 'nav-link negrita'
-    this.clasetextoCatalogos = 'nav-link';
     this.clasetextoQuejas = 'nav-link'
+    this.clasetextoCatalogos = 'nav-link';
   }
   
   clickQuejas(){
-    this.clasetextoProyectos = 'nav-link';
+    this.clasetextoBitacora = 'nav-link'
+    this.clasetextoTickets = 'nav-link'
     this.clasetextoQuejas = 'nav-link negrita'
     this.clasetextoCatalogos = 'nav-link';
+  }
+
+  clickBitacora(){
+    this.clasetextoBitacora = 'nav-link negrita'
     this.clasetextoTickets = 'nav-link'
+    this.clasetextoQuejas = 'nav-link'
+    this.clasetextoCatalogos = 'nav-link';
   }
 
   IniciarSesion(){
-    this.iniciarSesion = true;
+    this.iniciarSesion = false;
   }
 
   cerrarSesion(){
-    this.iniciarSesion = false;
+    this.iniciarSesion = true;
   }
 }
