@@ -12,16 +12,15 @@ export class AppComponent implements OnInit{
   constructor( private AppService: AppService ) {    }
   
   clasetextoProyectos: string;
-  clasetextoTicket: string;
-  clasetextoReporte: string;
+  clasetextoQuejas: string;
+  clasetextoCatalogos: string;
   iniciarSesion:boolean;
   ocultar:boolean;
 
   ngOnInit() {
-    window.location.href
     this.clasetextoProyectos = 'nav-link negrita';
-    this.clasetextoTicket = 'nav-link';
-    this.clasetextoReporte = 'nav-link';
+    this.clasetextoQuejas= 'nav-link';
+    this.clasetextoCatalogos = 'nav-link';
     this.iniciarSesion = false;
     this.ocultar = true;
   }
@@ -32,20 +31,20 @@ export class AppComponent implements OnInit{
 
   clickProyectos(){
     this.clasetextoProyectos = 'nav-link negrita'
-    this.clasetextoReporte = 'nav-link';
-    this.clasetextoTicket = 'nav-link';
+    this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoQuejas = 'nav-link';
   }
 
-  clickReporteDC(){
+  clickCatalogos(){
     this.clasetextoProyectos = 'nav-link';
-    this.clasetextoTicket = 'nav-link';
-    this.clasetextoReporte = 'nav-link negrita'
+    this.clasetextoQuejas = 'nav-link';
+    this.clasetextoCatalogos = 'nav-link negrita'
   }
 
   clickTickets(){
     this.clasetextoProyectos = 'nav-link';
-    this.clasetextoTicket = 'nav-link negrita'
-    this.clasetextoReporte = 'nav-link';
+    this.clasetextoQuejas = 'nav-link negrita'
+    this.clasetextoCatalogos = 'nav-link';
   }
   
   IniciarSesion(){

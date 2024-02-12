@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CdaComponent } from './cda/cda.component';
 import { ProyectosBauComponent } from './proyectos/proyectos.component';
-import { TicketsComponent } from './tickets/tickets.component';
+import { QuejasComponent } from './quejas/quejas.component';
 import { mantCatalogosComponent } from './mantCatalogos/mantCatalogos.component';
 
 
 const routes: Routes = [
   { path: 'Proyectos', component: ProyectosBauComponent, pathMatch: 'full'},
-  { path: 'Tickets', component:  TicketsComponent, pathMatch: 'full'},
+  { path: 'Quejas', component:  QuejasComponent, pathMatch: 'full'},
   { path: 'MantenimientoCatalogos', component: mantCatalogosComponent },
   { path: '**',redirectTo:''}
 ];

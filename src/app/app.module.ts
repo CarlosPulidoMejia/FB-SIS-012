@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReportesModule } from './mantCatalogos/mantCatalogos.module';
+import { MantCatalogosModule } from './mantCatalogos/mantCatalogos.module';
 import { HttpClientModule } from '@angular/common/http';
-import { TicketsModule } from './tickets/tickets.module';
+import { QuejasModule } from './quejas/quejas.module';
 import { ProyectosModule } from './proyectos/proyectos.module';
 import { CdaModule } from './cda/cda.module';
 import { FooterComponent } from './footer/footer.component';
@@ -18,8 +18,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReportesModule,
-    TicketsModule,
+    MantCatalogosModule,
+    QuejasModule,
     ProyectosModule,
     CdaModule,
     HttpClientModule

@@ -10,4 +10,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule
   ]
 })
-export class ReportesModule { }
+export class MantCatalogosModule { }

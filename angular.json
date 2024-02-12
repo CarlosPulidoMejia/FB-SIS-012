@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SeguimientoProyectos": {
+    "FB-SIS-02": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -81,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SeguimientoProyectos:build:production"
+              "browserTarget": "FB-SIS-02:build:production"
             },
             "development": {
-              "browserTarget": "SeguimientoProyectos:build:development",
+              "browserTarget": "FB-SIS-02:build:development",
 	      "port": 4400
             }
           },
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SeguimientoProyectos:build"
+            "browserTarget": "FB-SIS-02:build"
           }
         },
         "test": {
@@ -117,5 +117,5 @@
       }
     }
   },
-  "defaultProject": "SeguimientoProyectos"
+  "defaultProject": "oProyectos"
 }
