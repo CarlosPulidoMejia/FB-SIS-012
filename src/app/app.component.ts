@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
   clasetextoProyectos: string;
   clasetextoQuejas: string;
   clasetextoCatalogos: string;
+  clasetextoTickets:string;
   iniciarSesion:boolean;
   ocultar:boolean;
 
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit{
     this.clasetextoProyectos = 'nav-link negrita';
     this.clasetextoQuejas= 'nav-link';
     this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoTickets = 'nav-link';
     this.iniciarSesion = false;
     this.ocultar = true;
   }
@@ -33,20 +35,30 @@ export class AppComponent implements OnInit{
     this.clasetextoProyectos = 'nav-link negrita'
     this.clasetextoCatalogos = 'nav-link';
     this.clasetextoQuejas = 'nav-link';
+    this.clasetextoTickets = 'nav-link'
   }
 
   clickCatalogos(){
     this.clasetextoProyectos = 'nav-link';
     this.clasetextoQuejas = 'nav-link';
     this.clasetextoCatalogos = 'nav-link negrita'
+    this.clasetextoTickets = 'nav-link'
   }
 
   clickTickets(){
     this.clasetextoProyectos = 'nav-link';
-    this.clasetextoQuejas = 'nav-link negrita'
+    this.clasetextoTickets = 'nav-link negrita'
     this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoQuejas = 'nav-link'
   }
   
+  clickQuejas(){
+    this.clasetextoProyectos = 'nav-link';
+    this.clasetextoQuejas = 'nav-link negrita'
+    this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoTickets = 'nav-link'
+  }
+
   IniciarSesion(){
     this.iniciarSesion = true;
   }
