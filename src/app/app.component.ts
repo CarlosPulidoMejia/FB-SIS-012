@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   clasetextoTicket: string;
   clasetextoReporte: string;
   iniciarSesion:boolean;
+  ocultar:boolean;
 
   ngOnInit() {
     window.location.href
@@ -22,7 +23,13 @@ export class AppComponent implements OnInit{
     this.clasetextoTicket = 'nav-link';
     this.clasetextoReporte = 'nav-link';
     this.iniciarSesion = false;
+    this.ocultar = true;
   }
+
+  clickNavbar(){
+    this.ocultar = false;
+  }
+
   clickProyectos(){
     this.clasetextoProyectos = 'nav-link negrita'
     this.clasetextoReporte = 'nav-link';
