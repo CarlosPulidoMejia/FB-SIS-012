@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ReportesModule } from './reportes/reportes.module';
+import { ReportesModule } from './mantCatalogos/mantCatalogos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TicketsModule } from './tickets/tickets.module';
 import { ProyectosModule } from './proyectos/proyectos.module';
