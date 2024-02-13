@@ -6,16 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { MantCatalogosModule } from './mantCatalogos/mantCatalogos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { QuejasModule } from './quejas/quejas.module';
-import { ProyectosModule } from './proyectos/proyectos.module';
-import { CdaModule } from './cda/cda.module';
-import { FooterComponent } from './footer/footer.component';
+
+
 import { UsuariosModule } from './administación/usuarios/usuarios.module'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,8 +21,6 @@ import { UsuariosModule } from './administación/usuarios/usuarios.module';
     MantCatalogosModule,
     QuejasModule,
     UsuariosModule,
-    ProyectosModule,
-    CdaModule,
     HttpClientModule
   ],
   providers: [],

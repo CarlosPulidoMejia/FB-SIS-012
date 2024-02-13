@@ -13,9 +13,7 @@ export class JwtService {
 
 
   login() {
-    return this.httpClient.post<{access_token:  string}>('localhost:8080/login', {'username':'ClienteSpei','password':'Migracion'}).pipe(tap(res => {
-    localStorage.setItem('access_token', res.access_token);
-    }))
+    
   }
 
   logout() {

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-sm  shadow" style="background-color: #024e4f;" *ngIf="iniciarSesion == false">
   <a class="navbar-brand mx-3" routerLink=''  (click)="cerrarSesion()"><img
       src="../assets/resources/img/condusef1.png"     
-      width="470" height="70" style="max-height:75px;height:60px;" alt=""  width="100%" height="50%" 
+      width="470" height="60" style="max-height:75px;height:50px;" alt=""  width="100%" height="45%" 
       data-retina_logo_url="https://www.bim.mx/wp-content/uploads/2020/05/logo-bim-reduced-03-retina.png"
       class="fusion-standard-logo"></a>
   <!--Navbar links-->
@@ -24,7 +24,7 @@
         <a  [ngClass]="clasetextoAdministracion" (click)="clickAdministracion()" routerLink='AdministacionUsuarios' style="color:#ffff">Administración de Usuarios</a>
       </li>
     </ul>
-    <ul class="navbar-nav  ms-auto">
+    <ul class="navbar-nav  ms-auto"(click)="cerrarSesion()" routerLink=''>
       <li class="ms-auto mx-lg-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="28.921" height="30.849" viewBox="0 0 28.921 30.849">
           <path id="Icon_metro-exit" data-name="Icon metro-exit" d="M25.707,21.208V17.352h-9.64V13.5h9.64V9.64l5.784,5.784ZM23.779,19.28v7.712h-9.64v5.784L2.571,26.992V1.928H23.779v9.64H21.851V3.856H6.427l7.712,3.856V25.064h7.712V19.28Z" transform="translate(-2.571 -1.928)" fill="#ffff"/>
@@ -51,7 +51,7 @@
               </div>
           </div>
           <div class="text-center mb-4">
-              <button class="btn btn-primary btn-lg btn-block " (click)="IniciarSesion()" routerLink='ReportesDC' type="submit">Iniciar Sesión</button>
+              <button class="btn btn-primary btn-lg btn-block " (click)="IniciarSesion()" routerLink='BitacoraRespuestas' type="submit">Iniciar Sesión</button>
           </div>
           </div>
       </div>
