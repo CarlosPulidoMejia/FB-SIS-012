@@ -9,6 +9,8 @@ import { QuejasModule } from './quejas/quejas.module';
 import { ProyectosModule } from './proyectos/proyectos.module';
 import { CdaModule } from './cda/cda.module';
 import { FooterComponent } from './footer/footer.component';
+import { UsuariosModule } from './administación/usuarios/usuarios.module'; 
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     MantCatalogosModule,
     QuejasModule,
+    UsuariosModule,
     ProyectosModule,
     CdaModule,
     HttpClientModule

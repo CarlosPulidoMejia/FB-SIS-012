@@ -1,0 +1,301 @@
+<div class="row">
+    <div class="col-12 mb-5">
+        <div class="card">
+            <div class="card-body">
+                <h2>Administración de Usuarios<!--<p *ngIf="verUsuarios == true">de Usuarios</p><p *ngIf="verPerfiles == true">de Perfiles</p>--></h2>
+                <div class="col-3 mb-3">
+                    <button type="button" class="btn btn-success" hidden (click)="usuarios()">Usuarios</button>
+                    <button type="button" class="btn btn-success mx-2" hidden (click)="perfiles()">Perfiles</button>
+                </div>
+                <div *ngIf="verUsuarios == true">
+                    <!--Agregar Usuario-->
+                    <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Agregar Usuario</h6>
+                                <div class="row" *ngIf="ocultar == false">
+                                    <div class="col-2 form-floating">
+                                        <input type="text" class="form-control" id="proyectobau">
+                                        <label for="Nombre">Nombre Usuario</label>
+                                    </div>
+                                    <div class="col-2" hidden>
+                                        <div class="form-floating">
+                                            <select class="form-select" id="tipoProyecto" name="tipoProyecto">
+                                                <option>
+                                                </option>
+                                            </select>
+                                            <label for="Perfil">Perfil</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="Estatus" name="Estatus">
+                                                <option>
+                                                </option>
+                                            </select>
+                                            <label for="Estatus">Estatus</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="Contraseña">
+                                            <label for="Contraseña">Contraseña</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 ">
+                                        <button class="btn btn-success mt-3">
+                                            Agregar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-2 right" (click)="showData()" *ngIf="ocultar == true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.616" height="13.503"
+                                        viewBox="0 0 23.616 13.503">
+                                        <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                                            d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z"
+                                            transform="translate(-6.188 -11.246)" fill="#024e4f" />
+                                    </svg>
+                                </div>
+                                <div class="col-2 right" (click)="hideData()" *ngIf="ocultar == false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.619" height="13.503"
+                                        viewBox="0 0 23.619 13.503">
+                                        <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up"
+                                            d="M18,15.321l8.93,8.937a1.688,1.688,0,1,0,2.384-2.391L19.2,11.742a1.685,1.685,0,0,0-2.327-.049L6.68,21.86a1.688,1.688,0,0,0,2.384,2.391Z"
+                                            transform="translate(-6.188 -11.251)" fill="#024e4f" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br />
+                    <!-- Inicio Tabla -->
+                    <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table" id="tablaProyectos">
+                                <thead class="table-success">
+                                    <tr>
+                                        <!--<th scope="col" hidden>Activar Fechas</th>-->
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Nombre Completo</th>
+                                        <th scope="col">Estatus</th>
+                                        <th scope="col">Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario 1</td>
+                                        <td>Activo</td>
+                                        <td>
+                                            <button class="btn btn-success" data-toggle="modal"
+                                                data-target="#modalEditar">
+                                                ...
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Fin Tabla-->
+                </div>
+                <div *ngIf="verPerfiles == true">
+                    <!--Agregar Usuario-->
+                    <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Agregar Perfil</h6>
+                                <div class="row" *ngIf="ocultar == false">
+                                    <div class="col-2 form-floating">
+                                        <input type="text" class="form-control" id="proyectobau">
+                                        <label for="Nombre">Nombre Usuario</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="tipoProyecto" name="tipoProyecto">
+                                                <option>
+                                                </option>
+                                            </select>
+                                            <label for="Perfil">Perfil</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="Estatus" name="Estatus">
+                                                <option>
+                                                </option>
+                                            </select>
+                                            <label for="Estatus">Estatus</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="Contraseña">
+                                            <label for="Contraseña">Contraseña</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 ">
+                                        <button class="btn btn-success mt-3">
+                                            Agregar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-2 right" (click)="showData()" *ngIf="ocultar == true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.616" height="13.503"
+                                        viewBox="0 0 23.616 13.503">
+                                        <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                                            d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z"
+                                            transform="translate(-6.188 -11.246)" fill="#024e4f" />
+                                    </svg>
+                                </div>
+                                <div class="col-2 right" (click)="hideData()" *ngIf="ocultar == false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.619" height="13.503"
+                                        viewBox="0 0 23.619 13.503">
+                                        <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up"
+                                            d="M18,15.321l8.93,8.937a1.688,1.688,0,1,0,2.384-2.391L19.2,11.742a1.685,1.685,0,0,0-2.327-.049L6.68,21.86a1.688,1.688,0,0,0,2.384,2.391Z"
+                                            transform="translate(-6.188 -11.251)" fill="#024e4f" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br />
+                    <!-- Inicio Tabla -->
+                    <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table" id="tablaProyectos">
+                                <thead class="table-success">
+                                    <tr>
+                                        <!--<th scope="col" hidden>Activar Fechas</th>-->
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Nombre Completo</th>
+                                        <th scope="col">Estatus</th>
+                                        <th scope="col">Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Usuario1</td>
+                                        <td>Usuario 1</td>
+                                        <td>Activo</td>
+                                        <td>
+                                            <button class="btn btn-success" data-toggle="modal"
+                                                data-target="#modalEditar">
+                                                ...
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Fin Tabla-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="exampleModalLabel" class="modal-title">Editar Usuario</h5>
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close border">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body"><br>
+                <div>
+                    <div class="row mt-6">
+                        <div class="col-12">
+                            <div _ class="card">
+                                <div  class="card-body">
+                                    <h6  class="card-title">Nombre</h6>
+                                    <div  class="row">
+                                        <div class="col-12">
+                                            <div  class="form-floating">
+                                                <input type="text" class="form-control" id="proyectobau">
+                                                <label for="Nombre">Nombre Usuario</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="card-body">
+                                    <h6  class="card-title">Usuario</h6>
+                                    <div  class="row">
+                                        <div class="col-12">
+                                            <div  class="form-floating">
+                                                <input type="text" class="form-control" id="proyectobau">
+                                                <label for="Nombre">Nombre Usuario</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="card-body">
+                                    <h6  class="card-title">Estatus</h6>
+                                    <div  class="row">
+                                        <div class="col-12">
+                                            <div  class="form-floating">
+                                                <select class="form-select" id="responsable"  name="responsable">
+                                                    <option value="" selected>Seleccione un Estatus</option>
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
+                                                <label for="responsable">Estatus</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  class="card-body">
+                                    <h6  class="card-title">Contraseña</h6>
+                                    <div  class="row">
+                                        <div class="col-12">
+                                            <div  class="form-floating">
+                                                <input type="password" class="form-control" id="proyectobau">
+                                                <label for="Nombre">Contraseña</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Botones Modal-->
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-secondary">
+                    Cerrar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Guardar Comentarios
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .right {
+        justify-content: flex-end;
+        display: flex;
+        width: 150px;
+        position: absolute;
+        right: 0;
+        top: center;
+        margin-right: 10px;
+    }
+</style>

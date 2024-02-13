@@ -11,11 +11,11 @@ export class AppComponent implements OnInit{
 
   constructor( private AppService: AppService ) {    }
   
-  clasetextoProyectos: string;
   clasetextoQuejas: string;
   clasetextoCatalogos: string;
   clasetextoTickets:string;
   clasetextoBitacora: string;
+  clasetextoAdministracion: string;
   iniciarSesion:boolean;
   ocultar:boolean;
 
@@ -24,6 +24,7 @@ export class AppComponent implements OnInit{
     this.clasetextoQuejas= 'nav-link';
     this.clasetextoCatalogos = 'nav-link';
     this.clasetextoTickets = 'nav-link';
+    this.clasetextoAdministracion = 'nav-link';
     this.iniciarSesion = false;
     this.ocultar = true;
   }
@@ -32,18 +33,12 @@ export class AppComponent implements OnInit{
     this.ocultar = false;
   }
 
-  clickProyectos(){
-    this.clasetextoProyectos = 'nav-link negrita'
-    this.clasetextoCatalogos = 'nav-link';
-    this.clasetextoQuejas = 'nav-link';
-    this.clasetextoTickets = 'nav-link'
-  }
-
   clickCatalogos(){
     this.clasetextoBitacora = 'nav-link'
     this.clasetextoTickets = 'nav-link'
     this.clasetextoQuejas = 'nav-link'
     this.clasetextoCatalogos = 'nav-link negrita';
+    this.clasetextoAdministracion = 'nav-link';
   }
 
   clickTickets(){
@@ -51,6 +46,7 @@ export class AppComponent implements OnInit{
     this.clasetextoTickets = 'nav-link negrita'
     this.clasetextoQuejas = 'nav-link'
     this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoAdministracion = 'nav-link';
   }
   
   clickQuejas(){
@@ -58,6 +54,7 @@ export class AppComponent implements OnInit{
     this.clasetextoTickets = 'nav-link'
     this.clasetextoQuejas = 'nav-link negrita'
     this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoAdministracion = 'nav-link';
   }
 
   clickBitacora(){
@@ -65,6 +62,15 @@ export class AppComponent implements OnInit{
     this.clasetextoTickets = 'nav-link'
     this.clasetextoQuejas = 'nav-link'
     this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoAdministracion = 'nav-link';
+  }
+
+  clickAdministracion(){
+    this.clasetextoBitacora = 'nav-link'
+    this.clasetextoTickets = 'nav-link'
+    this.clasetextoQuejas = 'nav-link'
+    this.clasetextoCatalogos = 'nav-link';
+    this.clasetextoAdministracion = 'nav-link negrita';
   }
 
   IniciarSesion(){

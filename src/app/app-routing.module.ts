@@ -4,6 +4,7 @@ import { BitacoraComponent } from './bitacora/bitacora.component';
 import { QuejasComponent } from './quejas/quejas.component';
 import { mantCatalogosComponent } from './mantCatalogos/mantCatalogos.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { UsuariosComponent } from './administación/usuarios/usuarios.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'Tickets', component: TicketsComponent, pathMatch: 'full'},
   { path: 'Quejas', component:  QuejasComponent, pathMatch: 'full'},
   { path: 'MantenimientoCatalogos', component: mantCatalogosComponent },
+  { path: 'AdministacionUsuarios', component: UsuariosComponent , pathMatch: 'full'},
   { path: '**',redirectTo:''}
 ];
 
